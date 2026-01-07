@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Spideyyyyyyy!</title>
+    <title>For Spideyyyyyyyy 🕷️</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0; padding: 0;
-            background: #0f0f1e;
+            background: #12122b;
             color: white;
             font-family: 'Poppins', sans-serif;
             display: flex; justify-content: center; align-items: center;
@@ -16,39 +16,27 @@
         }
         .card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(15px);
             padding: 40px; border-radius: 30px;
-            border: 1px solid rgba(255, 46, 46, 0.3);
+            border: 1px solid #ff2e2e;
             width: 90%; max-width: 650px;
-            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
         }
         h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: clamp(3rem, 10vw, 5rem);
-            color: #ffd700;
-            margin: 0;
-            text-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+            font-size: 5rem; color: #ffd700;
+            margin: 0; text-shadow: 0 0 20px #ffd700;
         }
         #countdown {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #ff2e2e;
-            margin: 20px 0;
-            text-shadow: 0 0 10px rgba(255, 46, 46, 0.5);
+            font-size: 2.2rem; font-weight: 600;
+            color: #ff2e2e; margin: 15px 0;
         }
-        .wish-box { display: none; }
         .wish-text {
             font-size: 1.1rem; line-height: 1.8;
-            margin: 25px 0; color: #f0f0f0;
-        }
-        .btn-open {
-            background: #ff2e2e; color: white; border: none;
-            padding: 15px 40px; border-radius: 50px;
-            font-size: 1.2rem; cursor: pointer; font-weight: bold;
-            margin-top: 20px; box-shadow: 0 5px 20px rgba(255, 46, 46, 0.4);
+            margin: 20px 0; color: #e0e0e0;
         }
         audio {
-            margin-top: 20px; width: 100%; max-width: 300px;
+            margin-top: 20px; width: 100%; max-width: 320px;
             filter: invert(100%) hue-rotate(180deg) brightness(1.5);
         }
     </style>
@@ -56,47 +44,44 @@
 <body>
 
     <div class="card">
-        <h1>Spideyyyyyyyy</h1>
         
-        <div id="timer-section">
-            <p style="letter-spacing: 2px;">SURPRISE UNLOCKING IN...</p>
-            <div id="countdown">Loading...</div>
+        
+        <div id="timer-area">
+            <p style="letter-spacing: 2px; margin: 0;">UNROLLING SURPRISE IN...</p>
+            <div id="countdown">Loading Timer...</div>
         </div>
 
-        <div id="wish-box" class="wish-box">
-            <h2 style="color: #ffd700;">Happy Birthday, Spideyyyyyy! 🎂</h2>
-            <div class="wish-text">
-                I don’t know if anyone has told you this today, but you make the world look a little better just by being in it. There’s something about your smile, the way you carry yourself, the energy you bring — that’s genuinely hard to ignore. On your birthday, I hope you get all the happiness from everyone around you... and maybe a tiny bit extra, because you definitely deserve it. Keep shining, Spideyyyyy. ✨
-            </div>
-            <p style="color: #ffd700;">✨ Tum Tak, Tum Tak, Tum Tak... ✨</p>
-            
-            <audio id="bdaySong" controls loop>
-                <source src="music.mp3" type="audio/mpeg">
-            </audio>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Click play for your song! 🎵</p>
+        <div class="wish-text">
+            Happy Birthday, Spideyyyyyyy! 🎂<br>
+            I don’t know if anyone has told you this today, but you make the world look a little better just by being in it. There’s something about your smile, the way you carry yourself, the energy you bring — that’s genuinely hard to ignore. On your birthday, I hope you get all the happiness from everyone around you... and maybe a tiny bit extra, because you definitely deserve it. Keep shining, Spideyyyyy. ✨
         </div>
+
+        <p style="color: #ffd700; margin-bottom: 5px;">✨ Tum Tak, Tum Tak, Tum Tak... ✨</p>
+        
+        <audio controls id="bdaySong">
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Click play for your song! 🎵</p>
     </div>
 
     <script>
-        // SET BIRTHDAY DATE HERE: (Month Day, Year Time)
-        const birthdayDate = new Date("January 7, 2026 23:20:00").getTime();
+        // Use this date for the real birthday
+        const birthdayDate = new Date("January 7, 2026 23:30:00").getTime();
 
         const x = setInterval(function() {
             const now = new Date().getTime();
             const distance = birthdayDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            document.getElementById("countdown").innerHTML = d + "d " + h + "h " + m + "m " + s + "s ";
 
-            // When countdown ends
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("timer-section").style.display = "none";
-                document.getElementById("wish-box").style.display = "block";
+                document.getElementById("countdown").innerHTML = "ITS YOUR BIRTHDAY! 🎉";
             }
         }, 1000);
     </script>
